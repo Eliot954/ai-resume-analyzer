@@ -1,79 +1,25 @@
-# AI Resume Analyzer
+# 招聘数据采集与分析工具
 
-Upload your resume (PDF/DOCX) and get instant AI-powered analysis — skill assessments, career recommendations, and a visual report.
+为AI招聘/简历分析产品提供数据支持的爬虫与分析项目。
 
-## Features
+## 项目背景
+为了开发AI简历分析器等产品，需要真实的市场招聘数据。本项目实现了模拟招聘数据的抓取、清洗、统计分析和可视化。
 
-- **Resume Parsing** — Extract text from PDF and DOCX files
-- **AI Analysis** — DeepSeek-powered structured analysis: skills scoring, strengths/weaknesses, career suggestions
-- **Visual Report** — Interactive charts (radar, bar) and printable HTML report
-- **Modern UI** — React + TypeScript + Tailwind CSS with recharts visualization
+## 核心功能与贡献
+- 使用requests抓取招聘数据
+- pandas进行数据清洗和统计（薪资、城市、技能分布等）
+- matplotlib + seaborn生成4类可视化图表
+- 输出结构化数据（CSV、JSON、Excel），可直接用于AI训练或分析
 
-## Tech Stack
+## 产品思考
+- 此项目为后续AI招聘产品打下数据基础
+- 思考了数据合规性、反爬机制处理
+- 下一步计划：接入真实招聘API或大规模数据
 
-| Layer | Technology |
-|-------|-----------|
-| Frontend | React 18, TypeScript, Tailwind CSS, Recharts |
-| Backend | FastAPI (Python), Pydantic |
-| AI | DeepSeek API (OpenAI-compatible) |
-| PDF/DOCX | pdfplumber, python-docx |
-
-## Quick Start
-
-### Backend
-
-```bash
-cd backend
-pip install -r requirements.txt
-cp .env.example .env   # edit with your DEEPSEEK_API_KEY
-uvicorn app.main:app --reload --port 8000
-```
-
-### Frontend
-
-```bash
-cd frontend
-npm install
-npm run dev
-```
-
-Open http://localhost:5173 and upload a resume.
-
-## Project Structure
-
-```
-resume-analyzer/
-├── backend/
-│   ├── app/
-│   │   ├── main.py              # FastAPI app
-│   │   ├── config.py            # Settings (env vars)
-│   │   ├── routes/analyze.py    # API endpoints
-│   │   ├── services/
-│   │   │   ├── analyzer.py      # AI analysis via DeepSeek
-│   │   │   ├── extractor.py     # PDF/DOCX text extraction
-│   │   │   └── report.py        # HTML report generation
-│   │   ├── models/              # Pydantic models
-│   │   └── utils/               # Validators & prompts
-│   └── requirements.txt
-└── frontend/
-    ├── src/
-    │   ├── components/          # React components
-    │   ├── hooks/               # Custom hooks
-    │   ├── api/                 # API client
-    │   └── pages/               # Page layouts
-    └── package.json
-```
-
-## API
-
-| Method | Endpoint | Description |
-|--------|---------|-------------|
-| GET | `/api/health` | Health check |
-| POST | `/api/analyze` | Upload resume (multipart), returns analysis JSON |
-
-## Links
-
-- GitHub: https://github.com/Eliot954/ai-resume-analyzer
+## 文件说明
+- crawler.py：主程序
+- analysis.xlsx / data_cleaned.json：分析结果
+- recruitment_analysis.png：可视化报告
 
 ## 使用
 
