@@ -74,3 +74,7 @@ resume-analyzer/
 ## Links
 
 - GitHub: https://github.com/Eliot954/ai-resume-analyzer
+
+## 使用
+
+打开 [http://localhost:5173](http://localhost:5173) 即可使用。
