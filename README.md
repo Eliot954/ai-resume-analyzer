@@ -31,4 +31,4 @@
 <img width="2559" height="1531" alt="ad633165232266492effe7ac076d4c82" src="https://github.com/user-attachments/assets/a467304d-b664-4705-a4d9-32587fd8dfef" />
 <img width="2555" height="1484" alt="4b0a1f23e466a58e7ff1edec8ba68e7f" src="https://github.com/user-attachments/assets/51a69c3c-6995-4609-9fe4-84a66e67d837" />
 <img width="2547" height="1493" alt="0739061676035d11af3245dc082032c4" src="https://github.com/user-attachments/assets/ea9a0425-adcc-43eb-be22-3b55fb1921a8" />
-打开http://localhost:5173/查看
+
